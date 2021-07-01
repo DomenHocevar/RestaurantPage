@@ -1,0 +1,29 @@
+{
+  "name": "restaurantpage",
+  "version": "1.0.0",
+  "description": "A restaurant page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"A test\"",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DomenHocevar/RestaurantPage.git"
+  },
+  "keywords": [
+    "restaurant"
+  ],
+  "author": "Domen Hočevar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DomenHocevar/RestaurantPage/issues"
+  },
+  "homepage": "https://github.com/DomenHocevar/RestaurantPage#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.2",
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2"
+  }
+} 
