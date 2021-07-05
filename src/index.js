@@ -37,10 +37,6 @@ function getFooter(params) {
     return footer;
 }
 
-function cleanContainer(container) {
-    const childrenArray = Array.from(container.childNodes);
-    childrenArray.forEach(child => container.removeChild(child));
-}
 
 
 
@@ -54,9 +50,7 @@ body.appendChild(getHeader());
 body.appendChild(main);
 body.appendChild(footer);
 
-setHome(main);
-
-export {cleanContainer};
+setMenu(main);
 
 
 

@@ -1,5 +1,5 @@
 
-import {cleanContainer} from "../index.js";
+import {cleanContainer, getTableRow} from "../helpFunctions.js";
 import FoodImage from "../images/food.jpg";
 import LocationImage from "../images/location.jpg";
 
@@ -52,17 +52,6 @@ function addSchedule(targetContainer) {
     table.appendChild(getTableRow("Sunrday", "12.00 - 19.00"));
     section.appendChild(table);
 
-    function getTableRow(left, right) {
-        const row = document.createElement("tr");
-        const cell1 = document.createElement("td");
-        cell1.textContent = left;
-        const cell2 = document.createElement("td");
-        cell2.textContent = right;
-        row.appendChild(cell1);
-        row.appendChild(cell2);
-
-        return row;
-    }
 }
 
 function addLocation(targetContainer) {

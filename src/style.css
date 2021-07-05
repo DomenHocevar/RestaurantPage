@@ -99,8 +99,21 @@ table {
     padding: 10px;
 }
 
+
+
 td {
-    padding: 10px;
     border-bottom: 2px dashed black;
+}
+
+
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    color: black;
+    text-align: left;
+    background-color: lightgrey;
 }
 
