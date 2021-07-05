@@ -1,6 +1,8 @@
 
 import "./style.css";
-
+import {setHome} from "./pages/home.js";
+import {setMenu} from "./pages/menu.js";
+import {setContact} from "./pages/contact.js";
 
 function getHeader(params) {
     const header = document.createElement("header");
@@ -9,6 +11,15 @@ function getHeader(params) {
         const button = document.createElement("button");
         button.type = "button";
         button.textContent = name;
+        
+        let targetFunction;
+        if (name == "Home") targetFunction = setHome;
+        if (name == "Menu") targetFunction = setMenu;
+        if (name == "Contact") targetFunction = setContact;
+
+        button.addEventListener("click", function (params) {
+            targetFunction(main);
+        });
         return button;
     }
     
@@ -26,16 +37,9 @@ function getFooter(params) {
     return footer;
 }
 
-function setHome(params) {
-    
-}
-
-function setMenu(params) {
-    
-}
-
-function setContact(params) {
-    
+function cleanContainer(container) {
+    const childrenArray = Array.from(container.childNodes);
+    childrenArray.forEach(child => container.removeChild(child));
 }
 
 
@@ -44,10 +48,15 @@ const body = document.querySelector("body");
 const main = document.createElement("main");
 const footer = getFooter();
 
+
+
 body.appendChild(getHeader());
 body.appendChild(main);
 body.appendChild(footer);
 
+setHome(main);
+
+export {cleanContainer};
 
 
 

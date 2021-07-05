@@ -13,6 +13,7 @@ module.exports = {
         title: "Restaurant page"
     })
   ],
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
