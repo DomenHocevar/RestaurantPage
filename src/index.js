@@ -50,7 +50,7 @@ body.appendChild(getHeader());
 body.appendChild(main);
 body.appendChild(footer);
 
-setMenu(main);
+setHome(main);
 
 
 
